@@ -1,0 +1,42 @@
+.Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 8em;
+}
+
+.Header__child:nth-child(1) {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: absolute;
+    color: red;
+}
+.Header__child:nth-child(2){
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color: black;
+    background: red;
+    animation: clipchange 4s ease-in-out infinite ;
+    animation-direction: alternate;
+}
+
+.Header__child > h2{
+    font-size: 5em;
+}
+
+@keyframes clipchange {
+    0%,100%{
+        clip-path: polygon(0 55%, 14% 41%, 28% 35%, 40% 38%, 54% 48%, 65% 56%, 78% 59%, 91% 53%, 100% 41%, 100% 100%, 0% 100%, 0 77%);
+    }
+    50%{
+        clip-path: polygon(0 51%, 11% 65%, 25% 72%, 39% 73%, 51% 65%, 60% 58%, 71% 51%, 83% 43%, 100% 41%, 100% 100%, 0% 100%, 0 77%);
+    }
+}
